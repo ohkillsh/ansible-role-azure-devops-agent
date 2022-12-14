@@ -36,7 +36,7 @@
       - "/Environment"
       - "/EnvironmentName:{{ az_devops_environment_name }}"
       - "/AgentName:{{ az_devops_agent_name }}"
-      - "/EnvironmentTags:{{ az_devops_environment_tags | join(',') }}"
+      - "/EnvironmentTags:{{ az_devops_environment_tags | join(',') | default(omit) }}"
       - "/ProjectName:{{ az_devops_project_name }}"
 
 - name: Determine if the agent should be reconfigured or replaced
