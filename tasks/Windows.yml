@@ -96,6 +96,6 @@
 - name: Install azure-pipelines-agent package
   win_chocolatey:
     name: azure-pipelines-agent
-    state: reinstalled
+    state: present
     version: "{{ az_devops_agent_version }}"
     package_params: "{{ az_devops_agent_package_params | join(' ') }}"
