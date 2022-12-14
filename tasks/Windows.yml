@@ -93,6 +93,8 @@
   when:
     - az_devops_agent_role == 'resource'
 
+# TODO remover chocolatey, utilizar powershell.
+
 - name: Install azure-pipelines-agent package
   win_chocolatey:
     name: azure-pipelines-agent
